@@ -9,6 +9,12 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .container {
@@ -22,6 +28,11 @@ header {
     background-color: #2c3e50;
     color: #fff;
     padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 header .logo img {
@@ -31,7 +42,8 @@ header .logo img {
 header nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 header nav ul li {
@@ -39,33 +51,37 @@ header nav ul li {
 }
 
 header nav ul li a {
-    text-decoration: none;
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #e74c3c;
+    background-color: #e74c3c;
+    border-radius: 5px;
 }
 
-/* Sekcje */
-section {
-    padding: 60px 0;
+/* Hero Section */
+.hero-bg {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    border-bottom: 5px solid #e74c3c;
 }
 
-section h1, section h2 {
-    font-size: 2.5rem;
+.hero-bg h1 {
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
-section p {
+.hero-bg p {
     font-size: 1.2rem;
-    line-height: 1.6;
     margin-bottom: 20px;
 }
 
-/* Przycisk CTA */
 .cta-button {
     padding: 15px 30px;
     background-color: #e74c3c;
@@ -75,11 +91,22 @@ section p {
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #c0392b;
+}
+
+/* Sekcje */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 /* Funkcje serwera */
@@ -91,29 +118,40 @@ section p {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    gap: 20px;
 }
 
 .feature-item {
-    width: 30%;
-    padding: 20px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
 }
 
 .feature-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
 }
 
 .feature-item p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    color: #555;
 }
 
 /* Galeria */
+.bg-dark {
+    background-color: #2c3e50;
+}
+
 .gallery-images {
     display: flex;
     gap: 20px;
+    justify-content: center;
     margin-top: 30px;
 }
 
@@ -121,13 +159,20 @@ section p {
     width: 100%;
     max-width: 350px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-/* Sekcja kontaktowa */
+.gallery-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Kontakt */
 ul {
     list-style-type: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    margin-top: 20px;
 }
 
 ul li {
@@ -136,11 +181,11 @@ ul li {
 
 ul li a {
     color: #e74c3c;
-    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 ul li a:hover {
-    text-decoration: underline;
+    color: #c0392b;
 }
 
 /* Stopka */
@@ -153,4 +198,5 @@ footer {
 
 footer p {
     font-size: 1rem;
+    margin-top: 10px;
 }
