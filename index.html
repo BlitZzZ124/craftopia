@@ -4,224 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Serwer Minecraft - Nazwa Serwera</title>
-    <style>
-        /* Globalne ustawienia */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #ddd;
-            background-color: #121212;
-            background-image: url('https://www.minecraft.net/content/dam/minecraft/pmp/minecraft-net-hero.jpg'); /* Tło */
-            background-size: cover; /* Dostosowanie tła do wielkości ekranu */
-            background-position: center center; /* Wyrównanie tła do środka */
-            background-attachment: fixed; /* Ustalenie, by tło nie przesuwało się podczas przewijania */
-            height: 100vh; /* Ustawiamy wysokość na pełny ekran */
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Verdana', sans-serif;
-        }
-
-        a {
-            color: #ff6347;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #ffd700;
-        }
-
-        /* Nawigacja */
-        nav {
-            background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczysty pasek nawigacyjny */
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            background-color: #222;
-        }
-
-        nav ul li {
-            padding: 15px 25px;
-            margin: 0;
-        }
-
-        nav ul li a {
-            color: #ddd;
-            font-size: 1.1em;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            color: #ffd700;
-        }
-
-        /* Nagłówek */
-        header {
-            background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczysty nagłówek */
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3.5em;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-
-        /* Sekcje */
-        .content {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-
-        .section-title {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #ffd700;
-        }
-
-        .server-info,
-        .image-gallery {
-            background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczysty czarny */
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
-            margin-bottom: 40px;
-        }
-
-        .server-info ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .server-info li {
-            margin-bottom: 12px;
-            font-size: 1.2em;
-        }
-
-        .join-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-            margin: 20px auto;
-            display: block;
-            text-align: center;
-        }
-
-        .join-btn:hover {
-            background-color: #218838;
-        }
-
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .image-gallery img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Stopka */
-        footer {
-            background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczysty stopka */
-            color: #bbb;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-
-        footer a {
-            color: #ff6347;
-        }
-
-        footer a:hover {
-            color: #ffd700;
-        }
-    </style>
+    <meta name="description" content="Serwer Minecraft, ekscytująca rozgrywka w świecie pełnym przygód, budowania i rywalizacji.">
+    <meta name="keywords" content="Minecraft, serwer, gra, multiplayer, survival, creative">
+    <meta name="author" content="Twoje Imię">
+    <title>Serwer Minecraft - Zagraj z nami!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- Nawigacja -->
     <nav>
         <ul>
             <li><a href="#home">Strona Główna</a></li>
             <li><a href="#about">O Serwerze</a></li>
             <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#features">Funkcje</a></li>
             <li><a href="#contact">Kontakt</a></li>
         </ul>
     </nav>
 
-    <header>
-        <h1>Witaj na serwerze Minecraft!</h1>
-        <p>Dołącz do naszej ekscytującej przygody w Minecraft. Zbuduj, twórz i graj z najlepszą społecznością!</p>
+    <!-- Sekcja Nagłówka -->
+    <header id="home">
+        <img src="images/logo.png" alt="Serwer Minecraft Logo" class="logo">
+        <h1>Witaj na Serwerze Minecraft!</h1>
+        <p>Dołącz do naszej ekscytującej przygody w Minecraft i twórz niesamowite światy z innymi graczami!</p>
+        <a href="minecraft://connect/serwer.ip" class="join-btn">Dołącz do gry</a>
     </header>
 
-    <div class="content">
+    <!-- Sekcja O Serwerze -->
+    <section id="about" class="section">
+        <h2>O Serwerze</h2>
+        <p>Serwer Minecraft to miejsce dla graczy szukających kreatywnej zabawy i nowych wyzwań. Nasz serwer oferuje różne tryby gry, które zapewnią Ci godziny ekscytującej zabawy.</p>
+        <ul>
+            <li><strong>Survival:</strong> Zbuduj własne schronienie i przetrwaj w świecie pełnym niebezpieczeństw.</li>
+            <li><strong>Creative:</strong> Twórz nieskończone światy, budując w pełni swobodnie.</li>
+            <li><strong>Minigames:</strong> Weź udział w emocjonujących mini-grach jak Parkour, PvP i inne!</li>
+        </ul>
+    </section>
 
-        <!-- Sekcja O Serwerze -->
-        <div id="about" class="server-info">
-            <h2 class="section-title">O Serwerze</h2>
-            <p>Serwer Minecraft to miejsce, gdzie możesz w pełni wykorzystać swoją kreatywność. Niezależnie od tego, czy jesteś fanem survivalu, kreatywnym budowniczym, czy entuzjastą minigier, znajdziesz coś dla siebie.</p>
-            <ul>
-                <li><strong>IP serwera:</strong> minecraft.naszyserwer.pl</li>
-                <li><strong>Typ gry:</strong> Survival, Creative, Minigames</li>
-                <li><strong>Wersja:</strong> 1.18.1</li>
-                <li><strong>Discord:</strong> <a href="https://discord.gg/naszyserwer" target="_blank">Dołącz do Discorda!</a></li>
-            </ul>
-            <a href="minecraft://connect/minecraft.naszyserwer.pl" class="join-btn">Dołącz do gry</a>
+    <!-- Sekcja Galeria -->
+    <section id="gallery" class="section">
+        <h2>Galeria</h2>
+        <div class="image-gallery">
+            <img src="images/minecraft1.jpg" alt="Minecraft World 1">
+            <img src="images/minecraft2.jpg" alt="Minecraft World 2">
+            <img src="images/minecraft3.jpg" alt="Minecraft World 3">
         </div>
+    </section>
 
-        <!-- Sekcja Galeria -->
-        <div id="gallery" class="image-gallery">
-            <h2 class="section-title">Galeria</h2>
-            <img src="https://www.minecraft.net/content/dam/minecraft/pmp/minecraft-net-hero.jpg" alt="Minecraft World 1">
-            <img src="https://minecraft.novaskin.me/skin/209991" alt="Minecraft World 2">
-            <img src="https://www.planetminecraft.com/blog/7-best-minecraft-skin-pack-ideas-for-2023/" alt="Minecraft World 3">
-        </div>
+    <!-- Sekcja Funkcje -->
+    <section id="features" class="section">
+        <h2>Funkcje Serwera</h2>
+        <p>Serwer oferuje wiele unikalnych funkcji, które sprawiają, że każda rozgrywka jest wyjątkowa:</p>
+        <ul>
+            <li><strong>Ekstremalne przygody:</strong> Co tydzień nowe eventy i wyzwania!</li>
+            <li><strong>Fantastyczna społeczność:</strong> Poznaj nowych graczy i zbuduj drużynę do wspólnej gry!</li>
+            <li><strong>Nowoczesne pluginy:</strong> Używamy najnowszych pluginów, które ulepszają rozgrywkę.</li>
+            <li><strong>Bezpieczeństwo:</strong> Nasi admini dbają o uczciwość na serwerze i pomagają w rozwiązywaniu problemów.</li>
+        </ul>
+    </section>
 
-        <!-- Sekcja Kontakt -->
-        <div id="contact" class="server-info">
-            <h2 class="section-title">Kontakt</h2>
-            <p>Jeśli masz jakiekolwiek pytania, zapraszamy do kontaktu. Zawsze możesz dołączyć do naszego Discorda, gdzie znajdziesz wsparcie i informacje na temat serwera.</p>
-            <ul>
-                <li><strong>Discord:</strong> <a href="https://discord.gg/naszyserwer" target="_blank">Kliknij tutaj</a></li>
-                <li><strong>Email:</strong> support@naszyserwer.pl</li>
-            </ul>
-        </div>
+    <!-- Sekcja Kontakt -->
+    <section id="contact" class="section">
+        <h2>Kontakt</h2>
+        <p>Masz pytania? Skontaktuj się z nami lub odwiedź nas na Discordzie!</p>
+        <ul>
+            <li><strong>Email:</strong> support@serwer.pl</li>
+            <li><strong>Discord:</strong> <a href="https://discord.gg/serwer" target="_blank">Dołącz do naszego Discorda</a></li>
+        </ul>
+    </section>
 
-    </div>
-
+    <!-- Stopka -->
     <footer>
-        <p>&copy; 2025 Serwer Minecraft - Wszystkie prawa zastrzeżone. | <a href="https://discord.gg/naszyserwer" target="_blank">Dołącz do naszego Discorda!</a></p>
+        <p>&copy; 2025 Serwer Minecraft - Wszystkie prawa zastrzeżone</p>
     </footer>
 
 </body>
