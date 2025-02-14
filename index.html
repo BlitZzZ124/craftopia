@@ -1,107 +1,173 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Serwer Minecraft - craftopia </title>
+    <title>Serwer Minecraft - Nazwa Serwera</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #ddd;
             margin: 0;
             padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .content {
-            padding: 20px;
-        }
-        .server-info {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .server-info h2 {
-            margin-top: 0;
-        }
-        .server-info p {
             line-height: 1.6;
         }
-        .server-info .details {
-            background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 6px;
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        header p {
+            font-size: 1.2em;
             margin-top: 10px;
         }
+
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .server-info {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+        }
+
+        .server-info h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .server-info p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .server-info .details {
+            background-color: #444;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .server-info .details h3 {
+            font-size: 1.8em;
+            color: #ff6347;
+        }
+
         .server-info .details ul {
             list-style-type: none;
             padding-left: 0;
         }
+
         .server-info .details ul li {
-            margin-bottom: 8px;
+            font-size: 1.2em;
+            margin-bottom: 12px;
         }
+
         .join-btn {
             display: inline-block;
-            padding: 15px 25px;
+            padding: 15px 30px;
             background-color: #28a745;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            font-size: 1.2em;
             font-weight: bold;
-            text-align: center;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
+
         .join-btn:hover {
             background-color: #218838;
         }
+
+        .images {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .images img {
+            width: 48%;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #222;
+            color: #bbb;
             text-align: center;
-            padding: 15px;
-            margin-top: 20px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #ff6347;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #ffd700;
         }
     </style>
 </head>
+
 <body>
 
     <header>
-        <h1>Witaj na naszym serwerze Minecraft!</h1>
-        <p>Dołącz do najlepszej przygody w Minecraft! Baw się dobrze z naszą społecznością!</p>
+        <h1>Witaj na serwerze Minecraft!</h1>
+        <p>Dołącz do niezapomnianych przygód w Minecraft z naszą społecznością!</p>
     </header>
 
     <div class="content">
         <div class="server-info">
-            <h2>Informacje o serwerze</h2>
-            <p>Nasz serwer oferuje wyjątkowe doświadczenie Minecraft. Dołącz do nas i ciesz się rozgrywką w świecie pełnym możliwości!</p>
-            
+            <h2>O serwerze</h2>
+            <p>Nasza społeczność w Minecraft to miejsce pełne przygód, kreatywności i zabawy. Zbuduj swój świat, weź udział w wyzwaniach, graj z przyjaciółmi i baw się świetnie!</p>
+
             <div class="details">
                 <h3>Podstawowe informacje:</h3>
                 <ul>
                     <li><strong>IP serwera:</strong> minecraft.naszyserwer.pl</li>
-                    <li><strong>Typ gry:</strong> Survival </li>
-                    <li><strong>Wersja:</strong> 1.21.4</li>
-                    <li><strong> Discord </strong> <a href="https://discord.gg/naszyserwer" target="_blank">Kliknij tutaj</a></li>
+                    <li><strong>Typ gry:</strong> Survival, Creative, Minigames</li>
+                    <li><strong>Wersja:</strong> 1.18.1</li>
+                    <li><strong>Discord:</strong> <a href="https://discord.gg/naszyserwer" target="_blank">Kliknij tutaj</a></li>
                 </ul>
             </div>
+        </div>
+
+        <div class="images">
+            <img src="https://via.placeholder.com/600x400?text=Minecraft+World+1" alt="Minecraft World 1">
+            <img src="https://via.placeholder.com/600x400?text=Minecraft+World+2" alt="Minecraft World 2">
         </div>
 
         <a href="minecraft://connect/minecraft.naszyserwer.pl" class="join-btn">Dołącz do gry</a>
     </div>
 
     <footer>
-        <p>&copy; 2025 Serwer Minecraft - Wszystkie prawa zastrzeżone.</p>
+        <p>&copy; 2025 Serwer Minecraft - Wszystkie prawa zastrzeżone. | <a href="https://discord.gg/naszyserwer" target="_blank">Dołącz do naszego Discorda!</a></p>
     </footer>
 
 </body>
+
 </html>
