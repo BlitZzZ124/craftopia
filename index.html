@@ -14,6 +14,10 @@
             padding: 0;
             color: #ddd;
             background-color: #121212;
+            background-image: url('https://www.minecraft.net/content/dam/minecraft/pmp/minecraft-net-hero.jpg'); /* Tło */
+            background-size: cover; /* Dostosowanie tła do wielkości ekranu */
+            background-position: center center; /* Wyrównanie tła do środka */
+            background-attachment: fixed; /* Ustalenie, by tło nie przesuwało się podczas przewijania */
             line-height: 1.6;
         }
 
@@ -32,7 +36,7 @@
 
         /* Nawigacja */
         nav {
-            background-color: #1a1a1a;
+            background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczysty pasek nawigacyjny */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -65,7 +69,7 @@
 
         /* Nagłówek */
         header {
-            background-color: #111;
+            background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczysty nagłówek */
             color: white;
             padding: 50px 20px;
             text-align: center;
@@ -97,7 +101,7 @@
 
         .server-info,
         .image-gallery {
-            background-color: #222;
+            background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczysty czarny */
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
@@ -147,7 +151,7 @@
 
         /* Stopka */
         footer {
-            background-color: #1a1a1a;
+            background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczysty stopka */
             color: #bbb;
             text-align: center;
             padding: 20px;
