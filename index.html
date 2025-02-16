@@ -35,6 +35,8 @@
             list-style: none;
             display: flex;
             gap: 15px;
+            padding: 0;
+            margin: 0;
         }
 
         nav ul li {
@@ -45,6 +47,24 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        /* Responsywność */
+        @media (max-width: 768px) {
+            #header {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .logo img {
+                width: 70%;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 10px;
+            }
         }
     </style>
 </head>
@@ -79,7 +99,7 @@
             // Ustawiamy szerokość logo na 50% szerokości nagłówka
             logo.style.width = (headerWidth * 0.5) + "px";
 
-            // Ustawiamy wysokość na maksymalnie 80px, by logo nie było za wysokie
+            // Ustawiamy maksymalną wysokość logo
             logo.style.maxHeight = "80px";
         }
 
