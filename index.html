@@ -7,6 +7,13 @@
     <title>Craftopia - Serwer Minecraft</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Resetowanie domyślnych styli */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         /* Styl nagłówka */
         #header {
             display: flex;
@@ -14,13 +21,19 @@
             align-items: center;
             background-color: #222;
             padding: 10px 20px;
+            height: 120px; /* Ustalona wysokość nagłówka */
+            overflow: hidden;
+        }
+
+        .logo {
+            height: 100%;
+            flex-grow: 1; /* Wypełnia dostępne miejsce */
         }
 
         .logo img {
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
-            transition: all 0.3s ease-in-out;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Dopasowuje obraz do kontenera */
         }
 
         .container {
@@ -35,8 +48,6 @@
             list-style: none;
             display: flex;
             gap: 15px;
-            padding: 0;
-            margin: 0;
         }
 
         nav ul li {
@@ -49,17 +60,30 @@
             font-weight: bold;
         }
 
+        /* Styl sekcji */
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
         /* Responsywność */
         @media (max-width: 768px) {
             #header {
                 flex-direction: column;
-                align-items: center;
+                height: auto;
+                padding: 5px;
             }
-            
+
+            .logo {
+                width: 100%;
+                height: auto;
+            }
+
             .logo img {
-                width: 70%;
+                width: 100%;
+                height: auto;
             }
-            
+
             nav ul {
                 flex-direction: column;
                 text-align: center;
@@ -88,25 +112,74 @@
         </div>
     </header>
 
-    <script>
-        function adjustLogoSize() {
-            let logo = document.getElementById("logo");
-            let header = document.getElementById("header");
+    <!-- Wprowadzenie -->
+    <section id="about" class="section hero-bg">
+        <div class="container">
+            <h1>Witaj na serwerze Craftopia!</h1>
+            <p>Serwer Craftopia to idealne miejsce dla wszystkich graczy, którzy szukają wyjątkowego doświadczenia w grze Minecraft.</p>
+            <a href="#join" class="cta-button">Dołącz teraz</a>
+        </div>
+    </section>
 
-            // Pobieramy szerokość nagłówka
-            let headerWidth = header.clientWidth;
+    <!-- Funkcje serwera -->
+    <section id="features" class="section bg-dark">
+        <div class="container">
+            <h2>Najważniejsze Funkcje</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <h3>Unikalne tryby gry</h3>
+                    <p>Survival, SkyBlock, Creative i wiele innych!</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Wieloosobowa rozgrywka</h3>
+                    <p>Graj z przyjaciółmi i nowymi znajomymi.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Stabilność i wydajność</h3>
+                    <p>Bez lagów i z najlepszą jakością serwera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            // Ustawiamy szerokość logo na 50% szerokości nagłówka
-            logo.style.width = (headerWidth * 0.5) + "px";
+    <!-- Dołącz do serwera -->
+    <section id="join" class="section">
+        <div class="container">
+            <h2>Dołącz do serwera</h2>
+            <p><strong>Adres IP serwera:</strong> craftopia.mc</p>
+            <a href="https://www.minecraft.net" class="cta-button" target="_blank">Pobierz Minecrafta</a>
+        </div>
+    </section>
 
-            // Ustawiamy maksymalną wysokość logo
-            logo.style.maxHeight = "80px";
-        }
+    <!-- Galeria -->
+    <section id="gallery" class="section bg-dark">
+        <div class="container">
+            <h2>Galeria Serwera</h2>
+            <div class="gallery-images">
+                <img src="images/screenshot1.jpg" alt="Craftopia Screenshot 1">
+                <img src="images/screenshot2.jpg" alt="Craftopia Screenshot 2">
+                <img src="images/screenshot3.jpg" alt="Craftopia Screenshot 3">
+            </div>
+        </div>
+    </section>
 
-        // Uruchamiamy funkcję po załadowaniu strony i przy zmianie rozmiaru
-        window.onload = adjustLogoSize;
-        window.onresize = adjustLogoSize;
-    </script>
+    <!-- Kontakt -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <ul>
+                <li>Email: support@craftopia.mc</li>
+                <li>Discord: <a href="https://discord.com/invite/yourdiscordlink" target="_blank">Dołącz na Discorda</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; 2025 Craftopia - Wszystkie prawa zastrzeżone</p>
+        </div>
+    </footer>
 
 </body>
 </html>
