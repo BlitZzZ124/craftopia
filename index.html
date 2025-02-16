@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Oficjalna strona serwera Minecraft. Dołącz do naszej społeczności i graj na najlepszym serwerze Minecraft!">
     <title>Craftopia - Serwer Minecraft</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/logo.ico" type="image/x-icon">
     <style>
-        /* Reset stylów */
         * {
             margin: 0;
             padding: 0;
@@ -17,58 +15,41 @@
         }
 
         body {
-            background-color: #1a1a1a;
+            background: url('images/background.jpg') no-repeat center center/cover;
             color: white;
+            animation: fadeIn 1.5s ease-in;
         }
 
-        /* Nagłówek */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         #header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #222;
+            background-color: rgba(34, 34, 34, 0.9);
             padding: 25px 20px;
             height: 50px;
-            overflow: hidden;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-       
-
-        /* Nawigacja */
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
+            animation: slideDown 1s ease-in-out;
         }
 
-        nav ul li {
-            display: inline;
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
         }
 
-        nav ul li a {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background 0.3s ease-in-out;
-        }
-
-        nav ul li a:hover {
-            background: #FFD700;
-            color: black;
-        }
-
-        /* Sekcje */
         .section {
             padding: 60px 20px;
             text-align: center;
+            animation: fadeInUp 1.2s ease-in-out;
         }
 
-        .section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #FFD700;
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .cta-button {
@@ -78,74 +59,26 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 8px;
-            transition: background 0.3s ease-in-out;
+            transition: background 0.3s, transform 0.2s;
         }
 
         .cta-button:hover {
             background: #e6c300;
-        }
-
-        /* Galeria */
-        .gallery-images {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+            transform: scale(1.05);
         }
 
         .gallery-images img {
-            width: 250px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, opacity 0.3s;
         }
 
         .gallery-images img:hover {
             transform: scale(1.1);
-        }
-
-        /* Stopka */
-        #footer {
-            background: #111;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
-
-        /* Responsywność */
-        @media (max-width: 768px) {
-            #header {
-                flex-direction: column;
-                height: auto;
-                text-align: center;
-            }
-
-            .logo {
-                width: 80%;
-                margin: 0 auto;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-                padding-top: 10px;
-            }
-
-            .gallery-images img {
-                width: 100%;
-                max-width: 300px;
-            }
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
-
-    <!-- Nagłówek -->
     <header id="header">
-        <div class="logo">
-           
-        </div>
         <nav>
             <ul>
                 <li><a href="#about">O Serwerze</a></li>
@@ -157,74 +90,10 @@
         </nav>
     </header>
 
-    <!-- Wprowadzenie -->
-    <section id="about" class="section hero-bg">
-        <div class="container">
-            <h2>Witaj na serwerze Craftopia!</h2>
-            <p>Najlepszy serwer Minecraft z unikalnymi trybami gry i świetną społecznością.</p>
-            <a href="#join" class="cta-button">Dołącz teraz</a>
-        </div>
+    <section id="about" class="section">
+        <h2>Witaj na serwerze Craftopia!</h2>
+        <p>Najlepszy serwer Minecraft z unikalnymi trybami gry i świetną społecznością.</p>
+        <a href="#join" class="cta-button">Dołącz teraz</a>
     </section>
-
-    <!-- Funkcje serwera -->
-    <section id="features" class="section bg-dark">
-        <div class="container">
-            <h2>Najważniejsze Funkcje</h2>
-            <div class="features-list">
-                <div class="feature-item">
-                    <h3>🛠 Unikalne tryby gry</h3>
-                    <p>Survival, SkyBlock, Creative i więcej!</p>
-                </div>
-                <div class="feature-item">
-                    <h3>🌍 Wieloosobowa rozgrywka</h3>
-                    <p>Graj z przyjaciółmi i nowymi znajomymi.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>⚡ Stabilność i wydajność</h3>
-                    <p>Płynna rozgrywka bez lagów.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dołącz do serwera -->
-    <section id="join" class="section">
-        <div class="container">
-            <h2>Dołącz do serwera</h2>
-            <p><strong>Adres IP serwera:</strong> craftopia.cc</p>
-            <a href="https://www.minecraft.net" class="cta-button" target="_blank">Pobierz Minecrafta</a>
-        </div>
-    </section>
-
-    <!-- Galeria -->
-    <section id="gallery" class="section bg-dark">
-        <div class="container">
-            <h2>Galeria Serwera</h2>
-            <div class="gallery-images">
-                <img src="images/screenshot1.jpg" alt="Craftopia Screenshot 1">
-                <img src="images/screenshot2.jpg" alt="Craftopia Screenshot 2">
-                <img src="images/screenshot3.jpg" alt="Craftopia Screenshot 3">
-            </div>
-        </div>
-    </section>
-
-    <!-- Kontakt -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Kontakt</h2>
-            <ul>
-                <li>Email: support@craftopia.mc</li>
-                <li>Discord: <a href="https://discord.com/invite/yourdiscordlink" target="_blank">Dołącz na Discorda</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Stopka -->
-    <footer id="footer">
-        <div class="container">
-            <p>&copy; 2025 Craftopia - Wszystkie prawa zastrzeżone</p>
-        </div>
-    </footer>
-
 </body>
 </html>
