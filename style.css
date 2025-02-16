@@ -29,9 +29,9 @@ body, html {
     box-sizing: border-box;
 }
 
-/* Tło strony z parallaxem - zmienione z 'fixed' na 'scroll' */
+
 body {
-    background: url('img/logo.txt.webp') no-repeat center center/cover;
+    background: url('img/logo.txt.webp') ;
     background-attachment: scroll; /* Tło przesuwa się razem z treścią */
     color: #ddd;
 }
