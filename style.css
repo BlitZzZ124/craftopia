@@ -36,8 +36,11 @@ header {
 }
 
 header .logo img {
-    height: 50px;
+    width: 100%;   /* Szerokość obrazu rozciągnięta na 100% kontenera */
+    height: 100%;  /* Wysokość obrazu rozciągnięta na 100% kontenera */
+    object-fit: cover;  /* Zachowa wypełnienie, ale może przyciąć obrazek */
 }
+
 
 header nav ul {
     list-style-type: none;
