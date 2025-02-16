@@ -1,27 +1,3 @@
-/* Tło strony */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-.background {
-    background-image: url('img/logo.txt.webp'); /* Zamień na ścieżkę do swojego zdjęcia */
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Wysokość na całą stronę */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.title {
-    font-family: 'Minecraft', sans-serif; /* Jeśli chcesz czcionkę z Minecrafta */
-    font-size: 5em;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Cień dla napisu */
-}
-
 /* Globalne style */
 * {
     margin: 0;
@@ -29,50 +5,33 @@ body, html {
     box-sizing: border-box;
 }
 
-
-/* Tło strony */
 body, html {
-    margin: 0;
-    padding: 0;
     height: 100%;
-}
-
-/* Styl dla linków */
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 body {
     background: url('img/logo.txt.webp') no-repeat center center/cover;
-    background-attachment: scroll; /* Tło porusza się razem z treścią */
-    background-size: cover; /* Dostosowanie wielkości tła */
-    background-position: center center; /* Wyśrodkowanie tła */
+    background-size: cover;
+    background-position: center center;
     color: #ddd;
+    font-family: 'Minecraftia', sans-serif;
 }
 
-
-/* Kontener główny */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Nagłówek */
+/* Header */
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px; /* lub inna wartość zależna od wielkości nagłówka */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 }
 
 header img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
+/* Nawigacja */
 header nav ul {
     list-style-type: none;
     display: flex;
@@ -97,25 +56,18 @@ header nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Hero Section */
-.hero-bg {
-    background: url('images/hero-bg-dark.jpg') no-repeat center center/cover;
-    color: #fff;
+/* Sekcje */
+section {
+    padding: 60px 0;
     text-align: center;
-    padding: 120px 0;
-    border-bottom: 5px solid #e74c3c;
 }
 
-.hero-bg h1 {
-    font-size: 3rem;
+section h2 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.hero-bg p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
+/* Przycisk CTA */
 .cta-button {
     padding: 15px 30px;
     background-color: #e74c3c;
@@ -130,22 +82,7 @@ header nav ul li a:hover {
     background-color: #c0392b;
 }
 
-/* Sekcje */
-section {
-    padding: 60px 0;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-/* Funkcje serwera */
-.bg-dark {
-    background-color: #2c3e50;
-}
-
+/* Sekcje z funkcjami */
 .features-list {
     display: flex;
     justify-content: space-between;
@@ -231,4 +168,70 @@ footer {
 footer p {
     font-size: 1rem;
     margin-top: 10px;
+}
+
+/* Media Queries dla urządzeń mobilnych */
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ul li a {
+        padding: 8px 12px;
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+
+    .features-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .gallery-images img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul li a {
+        padding: 5px 10px;
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .feature-item {
+        width: 90%;
+    }
+
+    .gallery-images img {
+        width: 100%;
+        max-width: 250px;
+    }
 }
