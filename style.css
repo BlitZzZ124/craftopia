@@ -1,3 +1,26 @@
+/* Tło strony */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background {
+    background-image: url('img/logo.txt.webp'); /* Zamień na ścieżkę do swojego zdjęcia */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Wysokość na całą stronę */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.title {
+    font-family: 'Minecraft', sans-serif; /* Jeśli chcesz czcionkę z Minecrafta */
+    font-size: 5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Cień dla napisu */
+}
 /* Globalne style */
 * {
     margin: 0;
