@@ -25,7 +25,17 @@ a {
 
 /* Nagłówek */
 header {
-    background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* lub inna wartość zależna od wielkości nagłówka */
+}
+
+header img {
+  width: auto;
+  height: 80%; /* dostosuj do wysokości nagłówka */
+}
+{    background-color: #111;
     color: #fff;
     padding: 20px 0;
     position: fixed;
