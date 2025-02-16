@@ -32,9 +32,11 @@ header {
 }
 
 header img {
-  width: auto;
-  height: 80%; /* dostosuj do wysokości nagłówka */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
 {    background-color: #111;
     color: #fff;
     padding: 20px 0;
