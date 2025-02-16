@@ -21,6 +21,7 @@ body, html {
     font-size: 5em;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Cień dla napisu */
 }
+
 /* Globalne style */
 * {
     margin: 0;
@@ -28,17 +29,20 @@ body, html {
     box-sizing: border-box;
 }
 
+/* Tło strony z parallaxem - zmienione z 'fixed' na 'scroll' */
 body {
-    background: url('img/logo.txt.webp') no-repeat center center fixed;
-    background-size: cover;
+    background: url('img/logo.txt.webp') no-repeat center center/cover;
+    background-attachment: scroll; /* Tło przesuwa się razem z treścią */
+    color: #ddd;
 }
 
-
+/* Styl dla linków */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/* Kontener główny */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -57,16 +61,6 @@ header img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-{    background-color: #111;
-    color: #fff;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
 }
 
 header nav ul {
