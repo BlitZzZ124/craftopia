@@ -6,6 +6,47 @@
     <meta name="description" content="Oficjalna strona serwera Minecraft. Dołącz do naszej społeczności i graj na najlepszym serwerze Minecraft!">
     <title>Craftopia - Serwer Minecraft</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styl nagłówka */
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        /* Styl nawigacji */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,7 +54,7 @@
     <header id="header">
         <div class="container">
             <div class="logo">
-                <img src="img/logo_wide.webp" alt="opis obrazka"
+                <img id="logo" src="img/logo_wide.webp" alt="Logo Craftopia">
             </div>
             <nav>
                 <ul>
@@ -27,77 +68,25 @@
         </div>
     </header>
 
-    <!-- Wprowadzenie -->
-    <section id="about" class="section hero-bg">
-        <div class="container">
-            <h1>Witaj na serwerze Craftopia!</h1>
-            <p>Serwer Craftopia to idealne miejsce dla wszystkich graczy, którzy szukają wyjątkowego doświadczenia w grze Minecraft. Nasza społeczność, unikalne tryby gry oraz świetna atmosfera sprawiają, że każda godzina spędzona na naszym serwerze to niezapomniane wrażenia. Dołącz do nas i odkryj nieskończone możliwości!</p>
-            <a href="#join" class="cta-button">Dołącz teraz</a>
-        </div>
-    </section>
+    <script>
+        function adjustLogoSize() {
+            let logo = document.getElementById("logo");
+            let header = document.getElementById("header");
 
-    <!-- Funkcje serwera -->
-    <section id="features" class="section bg-dark">
-        <div class="container">
-            <h2>Najważniejsze Funkcje</h2>
-            <div class="features-list">
-                <div class="feature-item">
-                    <h3>Unikalne tryby gry</h3>
-                    <p>Oferujemy szeroki wybór trybów gry, w tym Survival, SkyBlock, Creative i wiele innych. Znajdź coś dla siebie!</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Wieloosobowa rozgrywka</h3>
-                    <p>Dołącz do przyjaciół lub znajdź nowych graczy na naszym serwerze. Zawsze jest z kim grać!</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Stabilność i wydajność</h3>
-                    <p>Nasz serwer jest wyjątkowo stabilny, dzięki czemu masz gwarancję płynnej rozgrywki bez lagów.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            // Pobieramy szerokość nagłówka
+            let headerWidth = header.clientWidth;
 
-    <!-- Dołącz do serwera -->
-    <section id="join" class="section">
-        <div class="container">
-            <h2>Dołącz do serwera</h2>
-            <p>Chcesz dołączyć do Craftopia? To bardzo proste! Wystarczy, że wpiszesz nasz adres IP w Minecraft i rozpoczniesz swoją przygodę z naszą społecznością!</p>
-            <p><strong>Adres IP serwera:</strong> craftopia.mc</p>
-            <a href="https://www.minecraft.net" class="cta-button" target="_blank">Pobierz Minecrafta</a>
-        </div>
-    </section>
+            // Ustawiamy szerokość logo na 50% szerokości nagłówka
+            logo.style.width = (headerWidth * 0.5) + "px";
 
-    <!-- Galeria -->
-    <section id="gallery" class="section bg-dark">
-        <div class="container">
-            <h2>Galeria Serwera</h2>
-            <div class="gallery-images">
-                <img src="images/screenshot1.jpg" alt="Craftopia Screenshot 1">
-                <img src="images/screenshot2.jpg" alt="Craftopia Screenshot 2">
-                <img src="images/screenshot3.jpg" alt="Craftopia Screenshot 3">
-            </div>
-        </div>
-    </section>
+            // Ustawiamy wysokość na maksymalnie 80px, by logo nie było za wysokie
+            logo.style.maxHeight = "80px";
+        }
 
-    <!-- Kontakt -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Kontakt</h2>
-            <p>Masz pytania lub potrzebujesz pomocy? Skontaktuj się z nami!</p>
-            <ul>
-                <li>Email: support@craftopia.mc</li>
-                <li>Discord: <a href="https://discord.com/invite/yourdiscordlink" target="_blank">Kliknij tutaj, aby dołączyć do naszego Discorda</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Stopka -->
-    <footer id="footer">
-        <div class="container">
-            <p>&copy; 2025 Craftopia - Wszystkie prawa zastrzeżone</p>
-        </div>
-    </footer>
+        // Uruchamiamy funkcję po załadowaniu strony i przy zmianie rozmiaru
+        window.onload = adjustLogoSize;
+        window.onresize = adjustLogoSize;
+    </script>
 
 </body>
 </html>
-
