@@ -11,46 +11,49 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Minecraftia', sans-serif;
         }
 
         body {
-            background: url('images/dark-minecraft-bg.jpg') no-repeat center center/cover;
-            color: #ccc;
+            background: url('images/minecraft-dark-bg.jpg') no-repeat center center/cover;
+            color: #ddd;
         }
 
         #header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: rgba(20, 20, 20, 0.9);
+            background-color: rgba(15, 15, 15, 0.95);
             padding: 25px 20px;
             height: 60px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
             animation: slideDown 1s ease-in-out;
         }
 
         .section {
             padding: 60px 20px;
             text-align: center;
-            background-color: rgba(10, 10, 10, 0.8);
+            background-color: rgba(10, 10, 10, 0.85);
             border-radius: 10px;
-            margin: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             animation: fadeInUp 1.2s ease-in-out;
         }
 
         .cta-button {
-            background: #8B8000;
+            background: #ac9c00;
             color: white;
             padding: 14px 30px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 10px;
             transition: background 0.3s, transform 0.2s;
+            font-family: 'Minecraftia', sans-serif;
         }
 
         .cta-button:hover {
-            background: #6e6a00;
+            background: #8a7c00;
             transform: scale(1.1);
         }
 
@@ -66,6 +69,7 @@
 
         .gallery-images img {
             transition: transform 0.3s ease-in-out, opacity 0.3s;
+            border: 3px solid #ac9c00;
         }
 
         .gallery-images img:hover {
@@ -89,37 +93,36 @@
 
     <section id="about" class="section">
         <h2>Witaj na serwerze Craftopia!</h2>
-        <p>Odkryj świat pełen przygód w stylu Minecraft! Craftopia to serwer z różnorodnymi trybami gry, gdzie możesz grać sam lub z przyjaciółmi.</p>
-        <p>Nasza społeczność jest pełna pasjonatów Minecrafta, a nasza administracja dba o porządek i zapewnia ciągłe nowości.</p>
-        <p>Dołącz już teraz i rozpocznij swoją przygodę!</p>
+        <p>Craftopia to serwer dla prawdziwych fanów Minecrafta, łączący klasyczne tryby gry z nowoczesnymi rozwiązaniami.</p>
+        <p>Znajdziesz tutaj unikalne światy, dynamiczne eventy oraz społeczność gotową do wspólnej zabawy.</p>
+        <p>Chcesz być częścią tej niesamowitej przygody? Dołącz do nas już dziś!</p>
         <a href="#join" class="cta-button">Dołącz teraz</a>
     </section>
 
     <section id="features" class="section">
         <h2>Najważniejsze Funkcje</h2>
         <ul>
-            <li>🛠 Unikalne tryby gry - Survival, SkyBlock, Creative, PvP, Hardcore</li>
-            <li>🌍 Wielki, otwarty świat z unikalnymi biomami i customowymi strukturami</li>
-            <li>⚡ Stabilność serwera, nowoczesne zabezpieczenia i brak lagów</li>
-            <li>🏆 Codzienne eventy, konkursy i ekskluzywne nagrody</li>
-            <li>💰 System ekonomii, sklepy graczy i wymiana przedmiotów</li>
-            <li>🔮 System magii, zaklęć i customowych przedmiotów</li>
-            <li>🔧 Aktywna administracja gotowa do pomocy 24/7</li>
+            <li>🛠 <strong>Unikalne tryby gry</strong> - Survival, SkyBlock, Creative, PvP, Hardcore</li>
+            <li>🌍 <strong>Eksploruj otwarty świat</strong> - customowe biomy, tajemnicze lochy i unikalne struktury</li>
+            <li>⚡ <strong>Stabilność serwera</strong> - najlepsza optymalizacja dla płynnej rozgrywki</li>
+            <li>🏆 <strong>Codzienne eventy</strong> - konkursy, bossy i nagrody dla najlepszych graczy</li>
+            <li>💰 <strong>Zaawansowana ekonomia</strong> - własne sklepy, domy aukcyjne i system handlu</li>
+            <li>🔮 <strong>Magia i zaklęcia</strong> - unikalne przedmioty, zaklęcia i crafting</li>
+            <li>🔧 <strong>Aktywna administracja</strong> - pomocna ekipa dostępna 24/7</li>
         </ul>
     </section>
 
     <section id="community" class="section">
         <h2>Nasza Społeczność</h2>
-        <p>Craftopia to nie tylko serwer – to prawdziwa społeczność pasjonatów Minecrafta!</p>
-        <p>Na naszym Discordzie znajdziesz pomocnych graczy, ciekawe rozmowy i najnowsze informacje o wydarzeniach.</p>
-        <p>Dołącz do nas i stań się częścią najlepszej ekipy!</p>
+        <p>Nasza społeczność to aktywni gracze, gotowi do wspólnej zabawy i pomocy nowym użytkownikom.</p>
+        <p>Dołącz na naszego Discorda, aby być na bieżąco z wydarzeniami i nowościami!</p>
         <a href="https://discord.com/invite/yourdiscordlink" class="cta-button" target="_blank">Dołącz na Discorda</a>
     </section>
 
     <section id="join" class="section">
         <h2>Jak Dołączyć?</h2>
         <p><strong>Adres IP serwera:</strong> craftopia.cc</p>
-        <p>Wystarczy pobrać Minecrafta, wpisać nasz adres IP i rozpocząć grę!</p>
+        <p>Wejdź do gry, wpisz nasz adres IP i zacznij swoją przygodę już dziś!</p>
         <a href="https://www.minecraft.net" class="cta-button" target="_blank">Pobierz Minecrafta</a>
     </section>
 </body>
